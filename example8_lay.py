@@ -6,7 +6,7 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'E8'
+team_name = 'team 8'
 strategy_name = 'Collude 90% unless betrayed within last 10 rounds.'
 strategy_description = '''\
 Betray if ever betrayed.
