@@ -8,8 +8,8 @@
 
 team_name = 'kates team' # Only 10 chars displayed.
 strategy_name = 'team 8 strategy'
-strategy_description = 'always b'
-    
+strategy_description = 'always b unless their_history is b than c'
+
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.
@@ -26,7 +26,7 @@ def move(my_history, their_history, my_score, their_score):
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
     
-    return 'b'
+    return 'b' or 'c'
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
@@ -38,7 +38,7 @@ def test_move(my_history, their_history, my_score, their_score, result):
     if real_result == result:
         return True
     else:
-        print("move(" +
+        print("move(" + 
             ", ".join(["'"+my_history+"'", "'"+their_history+"'",
                        str(my_score), str(their_score)])+
             ") returned " + "'" + real_result + "'" +
@@ -48,11 +48,11 @@ def test_move(my_history, their_history, my_score, their_score, result):
 if __name__ == '__main__':
      
     # Test 1: Betray on first move.
-    if test_move(my_history='',
-              their_history='', 
+    if test_move(my_history='b',
+              their_history='bbb', 
               my_score=0,
               their_score=0,
-              result='b'):
+              result='ccc'):
          print 'Test passed'
      # Test 2: Continue betraying if they collude despite being betrayed.
     test_move(my_history='bbb',
