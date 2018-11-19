@@ -48,9 +48,9 @@ def move(my_history, their_history, my_score, their_score):
     return 'c'
     '''
     #BETRAY
-    '''
+    
     return 'b'
-    '''
+    
     #tit for tat
     '''
     if their_history=='':
@@ -59,6 +59,7 @@ def move(my_history, their_history, my_score, their_score):
         return their_history[-1]
     '''
     #tit for tat with forgiveness
+    '''
     import random
     if their_history=='':
         return 'c'
@@ -66,7 +67,7 @@ def move(my_history, their_history, my_score, their_score):
         return 'c'
     else:
         return their_history[-1]
-    
+    '''
     #THE TESTED STRATEGY
     '''
     if my_history=='' and their_history=='':
