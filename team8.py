@@ -6,9 +6,10 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'kates team' # Only 10 chars displayed.
+team_name = "kates team" # Only 10 chars displayed.
 strategy_name = 'team 8 strategy'
-strategy_description = 'always b unless their_history is b than c'
+strategy_description = "always b unless their history is b, than c"+"always c"+"always input random"
+
 
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
