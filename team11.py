@@ -9,6 +9,8 @@
 team_name = 'Conspiring Against You' # Only 10 chars displayed.
 strategy_name = 'The Conspiring Strat'
 strategy_description = 'Conspire against others.'
+
+import random
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
@@ -17,6 +19,9 @@ def move(my_history, their_history, my_score, their_score):
     Make my move.
     Returns 'c' or 'b'. 
     '''
+    # Strategy Uno
+    if their_history=="":
+        return 'b'
 
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
     # their_history: a string of the same length as history, possibly empty. 
