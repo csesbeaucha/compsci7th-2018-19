@@ -7,7 +7,7 @@
 ####
 
 
-team_name = 'team2'
+team_name = 'E2'
 strategy_name = 'Alternate'
 strategy_description = 'Collude, then alternate.'
     
