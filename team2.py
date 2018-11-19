@@ -44,13 +44,13 @@ def move(my_history, their_history, my_score, their_score):
         return 'b'
     '''
     #COLLUDE
-    
+    '''
     return 'c'
-    
+    '''
     #BETRAY
-    '''
     
-    '''
+    return 'b'
+    
     #THE TESTED STRATEGY
     '''
     if my_history=='' and their_history=='':
