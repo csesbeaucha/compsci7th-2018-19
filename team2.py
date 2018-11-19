@@ -28,8 +28,9 @@ def move(my_history, their_history, my_score, their_score):
     '''  
         
     #STRATEGY 2
-    
-    if their_history[-1]=='c':
+    if their_history=='':
+        return 'c'
+    elif their_history[-1]=='c':
         return 'c'
     else:
         return 'b'
