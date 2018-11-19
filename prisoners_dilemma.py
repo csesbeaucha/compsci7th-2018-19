@@ -71,7 +71,7 @@ def main_play(modules):
     return scores, moves, [section0, section1, section2, section3]
         
 def play_tournament(modules):
-    '''Each argument is a module name
+    '''Each argument ise a module name
     Each module must contain 
         team_name: a string
         strategy_name: a string

@@ -18,14 +18,14 @@ def move(my_history, their_history, my_score, their_score):
     Returns 'c' or 'b'. 
     '''
     #STRATEGY 1
-    
+    '''
     import random
     result = random.randint(1,2)
     if result==1:
         return 'c'
     else:
         return 'b'
-     
+    '''
         
     #STRATEGY 2
     '''
@@ -37,12 +37,12 @@ def move(my_history, their_history, my_score, their_score):
         return 'b'
     '''
     #STRATEGY 3
-    '''
+    
     if theirscore>myscore:
         return 'b'
     else:
         return 'c'
-        '''
+        
         
     #THE TESTED STRATEGY
     '''

@@ -15,20 +15,20 @@ Section 1 - Player vs. Player
 --------------------------------------------------------------------------------
 Each column shows pts/round earned against each other player:
              P0     P1     P2     P3
-vs. P0 :      0      0   -248      0
-vs. P1 :      0      0    100      0
-vs. P2 :   -252   -500      0   -375
-vs. P3 :      0      0    -75      0
-TOTAL  :   -252   -500   -223   -375
+vs. P0 :      0   -273    -65   -192
+vs. P1 :     54      0    100      0
+vs. P2 :   -383   -500      0   -377
+vs. P3 :    -85      0    -74      0
+TOTAL  :   -414   -773    -39   -569
 --------------------------------------------------------------------------------
 Section 2 - Leaderboard
 --------------------------------------------------------------------------------
 Average points per round:
 Team name (P#):  Score      with strategy name
-E1        (P2):        -56 points with Betray                                  
-team 2    (P0):        -63 points with The name the team gives to this strategy
-E3        (P3):        -94 points with Collude but retaliate                   
-E0        (P1):       -125 points with Collude                                 
+E1        (P2):        -10 points with Betray                                  
+team 2    (P0):       -104 points with The name the team gives to this strategy
+E3        (P3):       -143 points with Collude but retaliate                   
+E0        (P1):       -194 points with Collude                                 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 team2--------------------------------------------------------------------------------
@@ -52,23 +52,24 @@ def move(my_history, their_history, my_score, their_score):
     Returns 'c' or 'b'. 
     '''
     #STRATEGY 1
-    '''
+    
     import random
     result = random.randint(1,2)
     if result==1:
         return 'c'
     else:
         return 'b'
-    '''  
+     
         
     #STRATEGY 2
+    '''
     if their_history=='':
         return 'c'
     elif their_history[-1]=='c':
         return 'c'
     else:
         return 'b'
-    
+    '''
     #STRATEGY 3
     '''
     if theirscore>myscore:
@@ -219,52 +220,46 @@ def move(my_history, their_history, my_score, their_score):
         return 'c' # otherwise collude.--------------------------------------------------------------------------------
 Section 3 - Game Data for Team team 2
 --------------------------------------------------------------------------------
-0 pt/round: team 2(P0) "The name the team gives to this strategy"
-0 pt/round: E0(P1) "Collude"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+54 pt/round: team 2(P0) "The name the team gives to this strategy"
+-273 pt/round: E0(P1) "Collude"
+BBCCCCBBCCBBCBBCBCCBBCCCBCBBBCCBBCBCCBBCBCCCCBCBCBBCCCBBBCBCCBBBBCBBCCCBCBBBBBCB
+ccCCCCccCCccCccCcCCccCCCcCcccCCccCcCCccCcCCCCcCcCccCCCcccCcCCccccCccCCCcCcccccCc
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCC
+BCBCBCBBCBCCBBBCBBCBBCBBBCCBBCCB
+cCcCcCccCcCCcccCccCccCcccCCccCCc
 
 --------------------------------------------------------------------------------
--252 pt/round: team 2(P0) "The name the team gives to this strategy"
--248 pt/round: E1(P2) "Betray"
-cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+-383 pt/round: team 2(P0) "The name the team gives to this strategy"
+-65 pt/round: E1(P2) "Betray"
+ccbccbccccccbbcccbbbbbbcccccbcbbbbbbbbcccccbbcccccccccbbcbbcbcccbbbcbcbcbcccbccb
+BBbBBbBBBBBBbbBBBbbbbbbBBBBBbBbbbbbbbbBBBBBbbBBBBBBBBBbbBbbBbBBBbbbBbBbBbBBBbBBb
 
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbccccbcbcccbcbbcbcbcccbcbccbbbbcbcbbbcbcbcbbcbbbbccbbcbbcbbbccccccbcccbcbbccbbc
+bbBBBBbBbBBBbBbbBbBbBBBbBbBBbbbbBbBbbbBbBbBbbBbbbbBBbbBbbBbbbBBBBBBbBBBbBbbBBbbB
 
-bbbbbbbb
-bbbbbbbb
+bbbccbbbccbccbcbcbc
+bbbBBbbbBBbBBbBbBbB
 
 --------------------------------------------------------------------------------
-0 pt/round: team 2(P0) "The name the team gives to this strategy"
-0 pt/round: E3(P3) "Collude but retaliate"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+-85 pt/round: team 2(P0) "The name the team gives to this strategy"
+-192 pt/round: E3(P3) "Collude but retaliate"
+BbBcCCCCBbCBbCCBbCCBbCBcBcBbCCBbBbCCCCCBcBcCBbCCBbBcCBbCBbBcCBcBcBcCBbCCCBbCBcCC
+cbcBCCCCcbCcbCCcbCCcbCcBcBcbCCcbcbCCCCCcBcBCcbCCcbcBCcbCcbcBCcBcBcBCcbCCCcbCcBCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+BbBbCCBbCCCBcBbCBcCCCBcBcCBcBcCBcCCCCCBbBbCBbBbBbBbBcBcCBbCCCBbBcC
+cbcbCCcbCCCcBcbCcBCCCcBcBCcBcBCcBCCCCCcbcbCcbcbcbcbcBcBCcbCCCcbcBC
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 Section 3 - Game Data for Team E0
 --------------------------------------------------------------------------------
-0 pt/round: E0(P1) "Collude"
-0 pt/round: team 2(P0) "The name the team gives to this strategy"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+-273 pt/round: E0(P1) "Collude"
+54 pt/round: team 2(P0) "The name the team gives to this strategy"
+ccCCCCccCCccCccCcCCccCCCcCcccCCccCcCCccCcCCCCcCcCccCCCcccCcCCccccCccCCCcCcccccCc
+BBCCCCBBCCBBCBBCBCCBBCCCBCBBBCCBBCBCCBBCBCCCCBCBCBBCCCBBBCBCCBBBBCBBCCCBCBBBBBCB
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-
-CCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCC
+cCcCcCccCcCCcccCccCccCcccCCccCCc
+BCBCBCBBCBCCBBBCBBCBBCBBBCCBBCCB
 
 --------------------------------------------------------------------------------
 -500 pt/round: E0(P1) "Collude"
@@ -272,11 +267,8 @@ CCCCCCCCCCCCCCCCCCC
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-
-ccccccccccccc
-BBBBBBBBBBBBB
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
 --------------------------------------------------------------------------------
 0 pt/round: E0(P1) "Collude"
@@ -284,23 +276,26 @@ BBBBBBBBBBBBB
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCC
+CCCCCCCCCCC
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 Section 3 - Game Data for Team E1
 --------------------------------------------------------------------------------
--248 pt/round: E1(P2) "Betray"
--252 pt/round: team 2(P0) "The name the team gives to this strategy"
-Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+-65 pt/round: E1(P2) "Betray"
+-383 pt/round: team 2(P0) "The name the team gives to this strategy"
+BBbBBbBBBBBBbbBBBbbbbbbBBBBBbBbbbbbbbbBBBBBbbBBBBBBBBBbbBbbBbBBBbbbBbBbBbBBBbBBb
+ccbccbccccccbbcccbbbbbbcccccbcbbbbbbbbcccccbbcccccccccbbcbbcbcccbbbcbcbcbcccbccb
 
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbBBBBbBbBBBbBbbBbBbBBBbBbBBbbbbBbBbbbBbBbBbbBbbbbBBbbBbbBbbbBBBBBBbBBBbBbbBBbbB
+bbccccbcbcccbcbbcbcbcccbcbccbbbbcbcbbbcbcbcbbcbbbbccbbcbbcbbbccccccbcccbcbbccbbc
 
-bbbbbbbb
-bbbbbbbb
+bbbBBbbbBBbBBbBbBbB
+bbbccbbbccbccbcbcbc
 
 --------------------------------------------------------------------------------
 100 pt/round: E1(P2) "Betray"
@@ -308,35 +303,29 @@ bbbbbbbb
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-
-BBBBBBBBBBBBB
-ccccccccccccc
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
 --------------------------------------------------------------------------------
--75 pt/round: E1(P2) "Betray"
--375 pt/round: E3(P3) "Collude but retaliate"
+-74 pt/round: E1(P2) "Betray"
+-377 pt/round: E3(P3) "Collude but retaliate"
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-
-BbBbBbBbBbBbBb
-cbcbcbcbcbcbcb
+BbBbBbBbBbBbBbBbBbBbB
+cbcbcbcbcbcbcbcbcbcbc
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 Section 3 - Game Data for Team E3
 --------------------------------------------------------------------------------
-0 pt/round: E3(P3) "Collude but retaliate"
-0 pt/round: team 2(P0) "The name the team gives to this strategy"
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+-192 pt/round: E3(P3) "Collude but retaliate"
+-85 pt/round: team 2(P0) "The name the team gives to this strategy"
+cbcBCCCCcbCcbCCcbCCcbCcBcBcbCCcbcbCCCCCcBcBCcbCCcbcBCcbCcbcBCcBcBcBCcbCCCcbCcBCC
+BbBcCCCCBbCBbCCBbCCBbCBcBcBbCCBbBbCCCCCBcBcCBbCCBbBcCBbCBbBcCBcBcBcCBbCCCBbCBcCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+cbcbCCcbCCCcBcbCcBCCCcBcBCcBcBCcBCCCCCcbcbCcbcbcbcbcBcBCcbCCCcbcBC
+BbBbCCBbCCCBcBbCBcCCCBcBcCBcBcCBcCCCCCBbBbCBbBbBbBbBcBcCBbCCCBbBcC
 
 --------------------------------------------------------------------------------
 0 pt/round: E3(P3) "Collude but retaliate"
@@ -344,19 +333,19 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCC
+CCCCCCCCCCC
 
 --------------------------------------------------------------------------------
--375 pt/round: E3(P3) "Collude but retaliate"
--75 pt/round: E1(P2) "Betray"
+-377 pt/round: E3(P3) "Collude but retaliate"
+-74 pt/round: E1(P2) "Betray"
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-
-cbcbcbcbcbcbcb
-BbBbBbBbBbBbBb
+cbcbcbcbcbcbcbcbcbcbc
+BbBbBbBbBbBbBbBbBbBbB
 
 --------------------------------------------------------------------------------
