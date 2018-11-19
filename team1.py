@@ -27,22 +27,23 @@ def move(my_history, their_history, my_score, their_score):
     # Decide whether to return 'c' or 'b'.
     
     # strategy 1
-    global var
+    var=0
     countb=0
     for i in range(len(their_history)):
         if their_history[i]=='b':
             countb+=1
+    if len(their_history)>=3:    
+        if their_history[-1]=='b' and their_history[-2]=='b' and their_history[-3]=='b':
+            var=3
     if countb<=10:
         if their_history=='':
             return 'b'
         if their_history[-1]=='c':
-            var-=1
             if my_history[-1]=='c':
                 return 'b'
             else:
                 return 'c'
         else:
-            var+=1
             if var>=3:
                 return 'b'
             else:
@@ -68,6 +69,12 @@ def move(my_history, their_history, my_score, their_score):
     #else:
         #return 'c'
     
+    #strategy 4
+    #if len(their_history)<=10:
+        #return 'b'
+    #else:
+        
+        
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
