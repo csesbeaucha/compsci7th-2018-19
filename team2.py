@@ -63,7 +63,7 @@ def move(my_history, their_history, my_score, their_score):
     import random
     if their_history=='':
         return 'c'
-    elif random.randint(1,50)==1:
+    elif random.randint(1,20)==1:
         return 'c'
     else:
         return their_history[-1]
