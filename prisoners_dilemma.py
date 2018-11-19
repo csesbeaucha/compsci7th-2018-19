@@ -1,7 +1,6 @@
 from __future__ import print_function
 
 var=0
-countb=0
 ##### 
 # Computer Science and Software Engineering
 # PLTW AP CS Principles

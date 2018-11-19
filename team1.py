@@ -29,7 +29,7 @@ def move(my_history, their_history, my_score, their_score):
     # strategy 1
     global var
     countb=0
-    for i in their_history:
+    for i in range(len(their_history)):
         if their_history[i]=='b':
             countb+=1
     if countb<=10:
