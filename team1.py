@@ -9,7 +9,7 @@
 team_name = 'team blue' # Only 10 chars displayed.
 strategy_name = 'The name the team gives to this strategy'
 strategy_description = 'How does this strategy decide?'
-    
+
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.
@@ -27,18 +27,44 @@ def move(my_history, their_history, my_score, their_score):
     # Decide whether to return 'c' or 'b'.
     
     # strategy 1
-    if their_history=='':
-        return 'b'
-    if their_history[-1]=='c':
-        if my_history[-1]=='c':
+    global var
+    global countb
+    if countb<=10:
+        if their_history=='':
             return 'b'
-        else:'c'
-    if '''global_variable>=2 note: to make, use:global variable name''':
-        return 'b'
+        if their_history[-1]=='c':
+            var-=1
+            if my_history[-1]=='c':
+                return 'b'
+            else:
+                return 'c'
+        else:
+            var+=1
+            if var>=3:
+                return 'b'
+            else:
+                return 'c'
     else:
-        return 'c'
+        countb-=1
+        return 'b'
         
     # strategy 2
+    #if their_history=='':
+        #return 'b'
+    #if their_history[-1]=='b':
+        #return 'b'
+    #else:
+            #return 'c'
+            
+    #strategy 3
+    #if their_history=='':
+        #return 'c'
+    #if 'bbbbb' in their_history:
+        #return 'b'
+    #if their_history[-1]=='c':
+        #return 'b'
+    #else:
+        #return 'c'
     
 
     
