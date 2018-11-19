@@ -51,9 +51,18 @@ def move(my_history, their_history, my_score, their_score):
     '''
     return 'b'
     '''
-    #COPY
-    
+    #tit for tat
+    '''
     if their_history=='':
+        return 'c'
+    else:
+        return their_history[-1]
+    '''
+    #tit for tat with forgiveness
+    import random
+    if their_history=='':
+        return 'c'
+    elif random.randint(1,50)==1:
         return 'c'
     else:
         return their_history[-1]
