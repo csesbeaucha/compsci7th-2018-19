@@ -42,17 +42,24 @@ def move(my_history, their_history, my_score, their_score):
         return 'c'
     else:
         return 'b'
-     '''   
-        
-    #THE TESTED STRATEGY
+    '''
+    #COLLUDE
     
+    return 'c'
+    
+    #BETRAY
+    '''
+    
+    '''
+    #THE TESTED STRATEGY
+    '''
     if my_history=='' and their_history=='':
         return 'b'
     elif 'c' in their_history:
         return 'b'
     else:
         return 'c'
-    
+    '''
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
     # their_history: a string of the same length as history, possibly empty. 
     # The first round between these two players is my_history[0] and their_history[0].
