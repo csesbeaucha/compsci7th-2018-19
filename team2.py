@@ -48,8 +48,15 @@ def move(my_history, their_history, my_score, their_score):
     return 'c'
     '''
     #BETRAY
-    
+    '''
     return 'b'
+    '''
+    #COPY
+    
+    if their_history=='':
+        return 'c'
+    else:
+        return their_history[-1]
     
     #THE TESTED STRATEGY
     '''
