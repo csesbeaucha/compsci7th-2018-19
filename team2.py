@@ -38,7 +38,7 @@ def move(my_history, their_history, my_score, their_score):
     '''
     #STRATEGY 3
     
-    if theirscore>myscore:
+    if their_score>my_score:
         return 'b'
     else:
         return 'c'
