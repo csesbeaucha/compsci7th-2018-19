@@ -8,7 +8,7 @@
 
 team_name = "kates team" # Only 10 chars displayed.
 strategy_name = 'team 8 strategy'
-strategy_description = "always b unless their history is b, than c"+"always c"+"always input random"
+strategy_description = "always c unless their history is b, than b"+"if their_score=500 than c"+"always input random when their_score=0 or less"
 
 
 def move(my_history, their_history, my_score, their_score):
@@ -65,5 +65,7 @@ if __name__ == '__main__':
               # 300 to me and -750 to them. This test will pass if and only if
               # move('bbb', 'ccc', 0, 0) returns 'b'.
               my_score=0, 
-              their_score=0,
+              their_score=500,
               result='b')             
+#strategy1: "always c unless their history is b, than b"
+#strategy2: "if their_score is 500 then c" 
