@@ -6,10 +6,10 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'The name the team gives to itself' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
+team_name = 'team blue' # Only 10 chars displayed.
+strategy_name = 'Plan B'
 strategy_description = 'How does this strategy decide?'
-    
+
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.
@@ -26,7 +26,55 @@ def move(my_history, their_history, my_score, their_score):
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
     
-    return 'c'
+    # strategy 1
+    var=0
+    countb=0
+    for i in range(len(their_history)):
+        if their_history[i]=='b':
+            countb+=1
+    if len(their_history)>=3:    
+        if their_history[-1]=='b' and their_history[-2]=='b' and their_history[-3]=='b':
+            var=3
+    if countb<=10:
+        if their_history=='':
+            return 'b'
+        if their_history[-1]=='c':
+            if my_history[-1]=='c':
+                return 'b'
+            else:
+                return 'c'
+        else:
+            if var>=3:
+                return 'b'
+            else:
+                return 'c'
+    else:
+        return 'b'
+        
+    # strategy 2
+    #if their_history=='':
+        #return 'b'
+    #if their_history[-1]=='b':
+        #return 'b'
+    #else:
+            #return 'c'
+            
+    #strategy 3
+    #if their_history=='':
+        #return 'c'
+    #if 'bbbbb' in their_history:
+        #return 'b'
+    #if their_history[-1]=='c':
+        #return 'b'
+    #else:
+        #return 'c'
+    
+    #strategy 4 (not completed)
+    #if len(their_history)<=10:
+        #return 'b'
+    #else:
+        
+        
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
