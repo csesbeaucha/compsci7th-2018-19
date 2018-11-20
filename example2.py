@@ -6,11 +6,8 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-<<<<<<< HEAD
-team_name = 'team 2 exists'
-=======
+
 team_name = 'E2'
->>>>>>> parent of b48cd50... Update example2.py
 strategy_name = 'Alternate'
 strategy_description = 'Collude, then alternate.'
     

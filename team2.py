@@ -6,12 +6,8 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-<<<<<<< HEAD
-team_name = 'the hmmm second team' # Only 10 chars displayed.
 
-=======
-team_name = 'ancde' # Only 10 chars displayed.
->>>>>>> Testing
+team_name = 'team 2' # Only 10 chars displayed.
 strategy_name = 'The name the team gives to this strategy'
 strategy_description = 'How does this strategy decide?'
     
@@ -22,7 +18,66 @@ def move(my_history, their_history, my_score, their_score):
     Make my move.
     Returns 'c' or 'b'. 
     '''
-
+    #STRATEGY 1
+    '''
+    import random
+    result = random.randint(1,2)
+    if result==1:
+        return 'c'
+    else:
+        return 'b'
+    '''
+        
+    #STRATEGY 2
+    '''
+    if their_history=='':
+        return 'c'
+    elif their_history[-1]=='c':
+        return 'c'
+    else:
+        return 'b'
+    '''
+    #STRATEGY 3
+    '''
+    if their_score>my_score:
+        return 'c'
+    else:
+        return 'b'
+    '''
+    #COLLUDE
+    '''
+    return 'c'
+    '''
+    #BETRAY
+    '''
+    return 'b'
+    '''
+    #tit for tat
+    '''
+    if their_history=='':
+        return 'c'
+    else:
+        return their_history[-1]
+    '''
+    #tit for tat with forgiveness
+    
+    import random
+    if their_history=='':
+        return 'c'
+    elif random.randint(1,20)==1:
+        return 'c'
+    else:
+        return their_history[-1]
+    
+    #THE TESTED STRATEGY
+    '''
+    if my_history=='' and their_history=='':
+        return 'b'
+    elif 'c' in their_history:
+        return 'b'
+    else:
+        return 'c'
+    '''
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
     # their_history: a string of the same length as history, possibly empty. 
     # The first round between these two players is my_history[0] and their_history[0].
@@ -30,8 +85,6 @@ def move(my_history, their_history, my_score, their_score):
     
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
-    
-    return 'c'
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
@@ -58,7 +111,7 @@ if __name__ == '__main__':
               my_score=0,
               their_score=0,
               result='b'):
-         print 'Test passed'
+        print 'Test passed'
      # Test 2: Continue betraying if they collude despite being betrayed.
     test_move(my_history='bbb',
               their_history='ccc', 
@@ -70,4 +123,4 @@ if __name__ == '__main__':
               # move('bbb', 'ccc', 0, 0) returns 'b'.
               my_score=0, 
               their_score=0,
-              result='b')             
+              result='b')
