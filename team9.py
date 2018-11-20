@@ -7,8 +7,8 @@
 ####
 
 team_name = 'team 9' # Only 10 chars displayed.
-strategy_name = ''
-strategy_description = ''
+strategy_name = 'team9 strategy'
+strategy_description = 'based on score'
 import random
     
 def move(my_history, their_history, my_score, their_score):
@@ -34,22 +34,22 @@ def move(my_history, their_history, my_score, their_score):
         return 'b'''
     
     #Strategy 2
-    if their_history=="":
-        yurt=random.choice('c','b')
+    '''if their_history=="":
+        yurt=random.choice(['c','b'])
         return yurt
     elif their_history=="c":
         return "b"
     else:
-        return "c"
+        return "c"'''
         
     #Strategy 3
-    '''if my_score>=50:
-        return "b"
-    elif my_score<=10:
+    if my_score>=50:
         return "c"
+    elif my_score<=10:
+        return "b"
     else:
-        a=random.choice("c","b")
-        return a'''
+        a=random.choice(["c","b"])
+        return a
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
