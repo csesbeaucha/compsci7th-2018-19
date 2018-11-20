@@ -123,7 +123,7 @@ def play_round(player1, player2, score1, score2, moves1, moves2):
     colluded in the first two rounds and betrayed in the most recent round.
     Returns a 2-tuple with score1 and score2 incremented by this round
     '''
-    
+
     RELEASE = 0 # (R, "reward" in literature) when both players collude
     TREAT = 100 # (T, "temptation" in literature) when you betray your partner
     SEVERE_PUNISHMENT = -500 # (S, "sucker" in literature) when your partner betrays you
