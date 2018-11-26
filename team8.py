@@ -6,7 +6,7 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-<<<<<<< HEAD
+
 team_name = 'kates team' # Only 10 chars displayed.
 strategy_name = 'team 8 strategy'
 strategy_description = 'always b'
@@ -19,7 +19,7 @@ If I haven't been betrayed yet, I'll betray starting with the 100th round.
 '''
 
 import random
->>>>>>> 63503ad3315b0b7f68f6044e03e99301d02ddd69
+
     
 def move(my_history, their_history, my_score, their_score):
     '''Make my move based on the history with this player.
@@ -39,11 +39,9 @@ def move(my_history, their_history, my_score, their_score):
             return 'b'         # Betray
         else:
             return 'c'         # but 90% of the time collude
-    
-<<<<<<< HEAD
+
     return 'b'
 
-=======
->>>>>>> 63503ad3315b0b7f68f6044e03e99301d02ddd69
+
     
     
