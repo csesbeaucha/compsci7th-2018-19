@@ -10,7 +10,7 @@
 team_name = 'kates team' # Only 10 chars displayed.
 strategy_name = 'team 8 strategy'
 strategy_description = 'always b'
-=======
+
 team_name = 'E8'
 strategy_name = 'Collude 90% unless betrayed within last 10 rounds.'
 strategy_description = '''\
